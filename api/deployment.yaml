@@ -18,6 +18,16 @@ spec:
         ports:
         - containerPort: 80
         imagePullPolicy: Always
+        readinessProbe:
+          httpGet:
+            path: /read
+            port: 80
+            scheme: HTTP
+          initialDelaySeconds: 1
+          timeoutSeconds: 1
+          failureThreshold: 3
+          periodSeconds: 5
+          successThreshold: 2
         livenessProbe:
           httpGet:
             path: /health
@@ -25,7 +35,7 @@ spec:
             scheme: HTTP
           initialDelaySeconds: 1
           timeoutSeconds: 1
-          failureThreshold: 1
+          failureThreshold: 3
           periodSeconds: 5
         envFrom:
           - configMapRef:
