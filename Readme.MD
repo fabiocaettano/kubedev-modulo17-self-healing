@@ -68,10 +68,10 @@ $ kubectl apply -f ./ -R
 
 
 <p>Após o pod se reiniciado a aplicação retornará positio para teste do check point</p>
-<img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/startup-probes/images/healthy.png"></img>
+<img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/master/images/healthy.png"></img>
 
 <p>Pronto para receber requisição:</p>
-<img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/startup-probes/images/requisicao.png"></img>
+<img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/master/images/requisicao.png"></img>
 
 <h2>Readiness Probes</h2>
 
@@ -97,14 +97,14 @@ $ kubectl apply -f ./ -R
 
 
 <p>Nesta situação o pod ficará no status de "não pronto".</p>
-<img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/startup-probes/images/pod-nao-iniciado.png"></p>
+<img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/master/images/pod-nao-iniciado.png"></p>
 
 
 <p>Por este motivo o pod não será conectado ao serviço.</p>
-<img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/startup-probes/images/unbind.png"></img>
+<img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/master/images/unbind.png"></img>
 
 <p>Quando o pod for reiniciado o endpoint será vinculado</p>
-<img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/startup-probes/images/bind.png"></img>
+<img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/master/images/bind.png"></img>
 
 
 <h2>StartUp Probes</h2>
