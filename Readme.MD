@@ -12,6 +12,8 @@
 <p>O endpoint /health verifica a saúde do container.</p>
 <p>Já o endpoint /read verifica se aplicação está pronta para receber requisição.
 
+<p>Para derrubar aplicação</p>
+<img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/startup-probes/images/unhealth.PNG"></img>
 <h2>Liveness Probes</h2>
 
 <h2>Readiness Probes</h2>
