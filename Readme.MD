@@ -18,7 +18,7 @@
 <p>O endpoint /unhealth derruba aplicação:</p>
 <img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/startup-probes/images/unhealth.PNG"></img>
 
-<p>Para simular que aplicação não está pronta é usaudo o endipoint</p>
+<p>Para simular que aplicação não está pronta é usaudo o endpoint /unreadfor.</p>
 <img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/startup-probes/images/unreadfor.PNG"></img>
 
 <h2>Liveness Probes</h2>
@@ -27,7 +27,7 @@
 
 <p>Após executarmos o endpoint /unhealth a aplicação ficará inacessivel.</p>
 
-<p>Em seguida acessarmos o endpoint /health receberemos um erro.</p>
+<p>O endpoint /health retornará com um erro.</p>
 <img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/startup-probes/images/unhealth2.png">
 
 <p>Para reinciar o pod é necessário incluir o livenessProbe no manifesto api/deployment.yaml:</p>
@@ -50,13 +50,18 @@ Aplicar alteração:
 $ kubectl apply -f ./ -R
 ```
 
-<p>Executar novamente o endpoint /unhealth.</p>
+<p>Executar novamente o endpoint /unhealth para derrubar aplicação</p>
 
-<p>Mas desta vez o pod será reiniciado:</p>
+<p>Com o parametro periodSeconds a livenessProbes irá checar o endpoint a cada 5 segundos.</p>
+<p>O parametro failureThreshold define o número limite de tentativas, se alcanção o pod é reiniciado.</p>
+<p>O timetourSeconds define o limite de aguardo para retorno do teste de conexão</p>
+
+
+<p>Quando o POD é reinciado ele demostra na coluna RESTARTS :</p>
 <img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/startup-probes/images/pod-reiniciado.png"></img>
 
 
-<p>Aplicação retornará positio para teste do check point</p>
+<p>Após o pod se reiniciado a aplicação retornará positio para teste do check point</p>
 <img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/startup-probes/images/healthy.png"></img>
 
 <p>Pronto para receber requisição:</p>
