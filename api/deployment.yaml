@@ -26,8 +26,7 @@ spec:
           initialDelaySeconds: 1
           timeoutSeconds: 1
           failureThreshold: 3
-          periodSeconds: 5
-          successThreshold: 2
+          periodSeconds: 10          
         startupProbe:
           httpGet:
             path: /health
@@ -43,7 +42,7 @@ spec:
           initialDelaySeconds: 1
           timeoutSeconds: 1
           failureThreshold: 3
-          periodSeconds: 5
+          periodSeconds: 10
         envFrom:
           - configMapRef:
               name: api-configmap

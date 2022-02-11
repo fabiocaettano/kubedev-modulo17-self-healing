@@ -69,6 +69,26 @@ $ kubectl apply -f ./ -R
 
 <h2>Readiness Probes</h2>
 
+<p>Incluir no api > deployment.yaml:</p>
+
+``` yaml
+readinessProbe:
+    httpGet:
+        path: /read
+        port: 80
+        scheme: HTTP
+    initialDelaySeconds: 1
+    timeoutSeconds: 1
+    failureThreshold: 3
+    periodSeconds: 10
+```
+
+Aplicar alteração:
+
+``` bash
+$ kubectl apply -f ./ -R
+```
+
 
 <p>Nesta situação o pod ficará no status de "não pronto".</p>
 <img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/startup-probes/images/pod-nao-iniciado.png"></p>
@@ -82,3 +102,26 @@ $ kubectl apply -f ./ -R
 
 
 <h2>StartUp Probes</h2>
+
+<p>Configuração indicada para aplicações que levam um certo tempo para inicializar</p>
+
+<p>Incluir no api > deployment.yaml:</p>
+
+``` yaml
+startupProbe:
+    httpGet:
+        path: /health
+        port: 80
+        scheme: HTTP
+    failureThreshold: 50
+    periodSeconds: 10
+```
+
+Aplicar alteração:
+
+``` bash
+$ kubectl apply -f ./ -R
+```
+
+
+
