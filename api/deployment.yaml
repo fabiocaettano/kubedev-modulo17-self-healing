@@ -28,6 +28,13 @@ spec:
           failureThreshold: 3
           periodSeconds: 5
           successThreshold: 2
+        startupProbe:
+          httpGet:
+            path: /health
+            port: 80
+            scheme: HTTP
+          failureThreshold: 50
+          periodSeconds: 10
         livenessProbe:
           httpGet:
             path: /health
