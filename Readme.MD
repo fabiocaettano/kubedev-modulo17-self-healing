@@ -69,4 +69,16 @@ $ kubectl apply -f ./ -R
 
 <h2>Readiness Probes</h2>
 
+
+<p>Nesta situação o pod ficará no status de "não pronto".</p>
+<img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/startup-probes/images/pod-nao-iniciado.png"></p>
+
+
+<p>Por este motivo o pod não será conectado ao serviço.</p>
+<img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/startup-probes/images/unbind.png"></img>
+
+<p>Quando o pod for reiniciado o endpoint será vinculado</p>
+<img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/startup-probes/images/bind.png"></img>
+
+
 <h2>StartUp Probes</h2>
