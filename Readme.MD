@@ -34,7 +34,7 @@ http://206.189.242.32/swagger/index.html
 <p>Após executarmos o endpoint /unhealth a aplicação ficará inacessivel.</p>
 
 <p>O endpoint /health retornará com um erro.</p>
-<img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/startup-probes/images/unhealth2.png">
+<img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/master/images/unhealth2.png">
 
 <p>Para reinciar o pod é necessário incluir o livenessProbe no manifesto api/deployment.yaml:</p>
 
@@ -64,7 +64,7 @@ $ kubectl apply -f ./ -R
 
 
 <p>Quando o POD é reinciado ele demostra na coluna RESTARTS :</p>
-<img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/startup-probes/images/pod-reiniciado.png"></img>
+<img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/master/images/pod-reiniciado.png"></img>
 
 
 <p>Após o pod se reiniciado a aplicação retornará positio para teste do check point</p>
