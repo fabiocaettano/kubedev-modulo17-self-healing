@@ -22,10 +22,10 @@ http://206.189.242.32/swagger/index.html
 <p>Já o endpoint /read verifica se aplicação está pronta para receber requisição.</p>
 
 <p>O endpoint /unhealth derruba aplicação:</p>
-<img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/startup-probes/images/unhealth.PNG"></img>
+<img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/master/images/unhealth.PNG"></img>
 
 <p>Para simular que aplicação não está pronta é usaudo o endpoint /unreadfor.</p>
-<img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/startup-probes/images/unreadfor.PNG"></img>
+<img src="https://github.com/fabiocaettano/kubedev-modulo17-self-healing/blob/master/images/unreadfor.PNG"></img>
 
 <h2>Liveness Probes</h2>
 
