@@ -17,7 +17,12 @@ spec:
         image: fabiocaettano74/pedelogo-catalogo:v1.0.0
         ports:
         - containerPort: 80
-        imagePullPolicy: Always        
+        imagePullPolicy: Always
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 80
+            scheme: HTTP
         envFrom:
           - configMapRef:
               name: api-configmap
