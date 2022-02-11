@@ -9,6 +9,11 @@
 
 <h2>Api para teste</h2>
 
+<p>Acessar aplicação:</p>
+``` http
+http://206.189.242.32/swagger/index.html
+```
+
 <p>Api pedelogo-catalogo possui endpoints que verificam se aplicação esta saudável ou deixam aplicação inacessivel.</p>
 
 <p>O endpoint /health verifica a saúde do container.</p>
